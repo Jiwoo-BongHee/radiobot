@@ -37,15 +37,15 @@ if (message.content === "/join"){
 }
 
 
-if (message.content === "/stop"){
-var channel = message.guild.channels.find('name', "Radio 24/7 Kpop");
+if (message.content === "?stop"){
+var channel = message.guild.channels.find('name', "Radio 24/7");
 var auteur = message.author.username;
 var guild = message.guild;
 	if (channel){
     	if (message.member.roles.find("name", "DJ")){
         	channel.leave();
         	console.log("--Deconnexion--")
-        	console.log(new Date + auteur + " m'a déconnecté du channel \"Radio 24/7 Kpop\" du serveur " + guild)
+        	console.log(new Date + auteur + " m'a déconnecté du channel \"Radio\" du serveur " + guild)
         	};
 
     	if (!message.member.roles.find("name", "DJ")){
