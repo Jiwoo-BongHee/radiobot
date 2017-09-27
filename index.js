@@ -13,7 +13,7 @@ client.on("ready", () => {
 
 client.on("message", (message) => {
 
-if (message.content === "/join"){
+if (message.content === ".join"){
 	if (message.member.roles.find("name", "DJ")){
 	var channel = message.guild.channels.find('name', "Radio Kpop 24/7");
 	var auteur = message.author.username;
@@ -37,7 +37,7 @@ if (message.content === "/join"){
 }
 
 
-if (message.content === "?stop"){
+if (message.content === ".stop"){
 var channel = message.guild.channels.find('name', "Radio 24/7");
 var auteur = message.author.username;
 var guild = message.guild;
@@ -54,34 +54,34 @@ var guild = message.guild;
 	}
 };
 
-if (message.content === "/invite"){
+if (message.content === ".invite"){
 	message.channel.send("Voici le lien pour m'ajouter à votre serveur : https://discordapp.com/oauth2/authorize?&client_id=362595560697626635&scope=bot&permissions=0x00000008")
 }
 	
-if (message.content === "/playlist"){
+if (message.content === ".playlist"){
 	message.channel.send("Voici la playlist que je joue actuellement : " + radio)
 }
 
-if (message.content === "/help"){
+if (message.content === ".help"){
 	message.channel.send("Regarde tes MP ! :smile:")
 	message.author.send([
 		"Commandes utilisables :",
-		"`/join` : Me fait rejoindre le channel `Radio Kpop 24/7` (DJ seuleument)",
-		"`/stop` : Me fait quitter le channel `Radio Kpop 24/7` (DJ seuleument)",
-		"`/help` : Envoie ce message",
-		"`/invite` : Envoie le lien pour m'ajouter à votre serveur",
-		"`/playlist`: Indique la playlist que je joue actuellement",
-		"`/config`: Indique comment faire fonctionner le bot (commande en Message Privé avec le bot uniquement)",
+		"`.join` : Me fait rejoindre le channel `Radio Kpop 24/7` (DJ seuleument)",
+		"`.stop` : Me fait quitter le channel `Radio Kpop 24/7` (DJ seuleument)",
+		"`.help` : Envoie ce message",
+		"`.invite` : Envoie le lien pour m'ajouter à votre serveur",
+		"`.playlist`: Indique la playlist que je joue actuellement",
+		"`.config`: Indique comment faire fonctionner le bot (commande en Message Privé avec le bot uniquement)",
 		"Pour la création d'un bot personnalisé, merci de contacter `Atanabe Rio#0178` en MP !"
 		])
 }
 
 if (message.channel.type == 'dm'){
-	if (message.content == '/config'){
+	if (message.content == '.config'){
 		message.author.send([
-		"Pour pouvoir gérer le bot (faire les commandes `/join` et `/stop`), vous devez posséder un rôle `DJ` sans permissions particulières.",
-		"Lors de l'utilisation de `/join`, le bot joindra automatiquement un channel intitulé `Radio Kpop 24/7`, s'il ne le trouve pas, le bot vous le signalera et vous dira de le créer.",
-		"Lors de l'utilisation de `/stop`, le bot quitte automatiquement le channel auquel il est connecté.",
+		"Pour pouvoir gérer le bot (faire les commandes `.join` et `.stop`), vous devez posséder un rôle `DJ` sans permissions particulières.",
+		"Lors de l'utilisation de `.join`, le bot joindra automatiquement un channel intitulé `Radio Kpop 24/7`, s'il ne le trouve pas, le bot vous le signalera et vous dira de le créer.",
+		"Lors de l'utilisation de `.stop`, le bot quitte automatiquement le channel auquel il est connecté.",
 		"Si un problème se pose, merci de contacter `Atanabe Rio#0178` en MP !"
 		])
 	}
