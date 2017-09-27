@@ -18,7 +18,7 @@ if (message.content === "/join"){
 	var channel = message.guild.channels.find('name', "Radio Kpop 24/7");
 	var auteur = message.author.username;
 	var guild = message.guild;
-	var radio = "https://listen.moe/stream" 
+	var radio = "streaming.radionomy.com/RADIO-KPOP" 
 		if (channel){
 		channel.join().then(connection => {
         	connection.playStream(radio);
